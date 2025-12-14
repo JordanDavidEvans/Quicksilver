@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quicksilver</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body { width: 320px; }
+      section { box-shadow: none; }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h2>Mode</h2>
+      <select id="mode">
+        <option value="privacy">Privacy Noise</option>
+        <option value="qa">QA / Test Mode</option>
+        <option value="research">Research</option>
+      </select>
+      <p class="disclaimer">
+        Run only on sites you approve. Not for ad clicks, paywalls, or revenue manipulation.
+      </p>
+      <div class="list-inline">
+        <button id="start">Start</button>
+        <button class="secondary" id="stop">Stop</button>
+      </div>
+      <p id="status"></p>
+      <a href="options.html" target="_blank">Configure behavior</a>
+    </section>
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Quicksilver Browsing Simulator",
+  "description": "Simulate benign, human-like browsing for privacy noise, QA testing, and research with strong ethical safeguards.",
+  "version": "0.1.0",
+  "permissions": [
+    "storage",
+    "scripting",
+    "tabs",
+    "activeTab"
+  ],
+  "optional_permissions": [
+    "history"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "action": {
+    "default_popup": "src/popup.html",
+    "default_title": "Quicksilver"
+  },
+  "options_page": "src/options.html",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
